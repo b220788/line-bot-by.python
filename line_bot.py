@@ -78,10 +78,450 @@ def pretty_echo(event):
         if message_get =="控制選單":
         
         
-
-            A='255'
-            FlexMessage = json.load(open('layout/ALL_MENU/FlexMessage_control_'+A+'.json','r',encoding='utf-8'))
-            line_bot_api.reply_message( event.reply_token, FlexSendMessage("控制選單",FlexMessage))
+            content = {
+                    "type": "carousel",
+                    "contents": [
+                        {
+                            "type": "bubble",
+                            "header": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": []
+                            },
+                            "hero": {
+                                "type": "image",
+                                "url": "https://cdn-icons-png.flaticon.com/512/4551/4551810.png",
+                                "margin": "xs",
+                                "gravity": "top"
+                            },
+                            "body": {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "循環風扇",
+                                        "size": "30px",
+                                        "gravity": "top",
+                                        "wrap": False,
+                                        "weight": "bold",
+                                        "style": "normal",
+                                        "position": "relative",
+                                        "align": "center"
+                                    }
+                                ]
+                            },
+                            "footer": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "label": "ON",
+                                            "text": "開循環風扇"
+                                        }
+                                    },
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "label": "OFF",
+                                            "text": "關循環風扇"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "bubble",
+                            "header": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": []
+                            },
+                            "hero": {
+                                "type": "image",
+                                "url": "https://cdn-icons.flaticon.com/png/512/5828/premium/5828534.png?token=exp=1652163441~hmac=dc61c6caf4f56fcf1471e2d4def017d5"
+                            },
+                            "body": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "負壓風扇",
+                                        "size": "30px",
+                                        "gravity": "top",
+                                        "wrap": False,
+                                        "weight": "bold",
+                                        "style": "normal",
+                                        "position": "relative",
+                                        "align": "center"
+                                    }
+                                ]
+                            },
+                            "footer": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "label": "ON",
+                                            "text": "開負壓風扇"
+                                        }
+                                    },
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "label": "OFF",
+                                            "text": "關負壓風扇"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "bubble",
+                            "header": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": []
+                            },
+                            "hero": {
+                                "type": "image",
+                                "url": "https://cdn-icons.flaticon.com/png/512/4883/premium/4883024.png?token=exp=1652164320~hmac=6e63500df6aa6068be5643a9f9933286"
+                            },
+                            "body": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "噴霧馬達",
+                                        "size": "30px",
+                                        "gravity": "top",
+                                        "wrap": False,
+                                        "weight": "bold",
+                                        "style": "normal",
+                                        "position": "relative",
+                                        "align": "center"
+                                    }
+                                ]
+                            },
+                            "footer": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "text": "開噴霧馬達",
+                                            "label": "ON"
+                                        }
+                                    },
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "label": "OFF",
+                                            "text": "關噴霧馬達"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "bubble",
+                            "header": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": []
+                            },
+                            "hero": {
+                                "type": "image",
+                                "url": "https://cdn-icons-png.flaticon.com/512/5865/5865451.png"
+                            },
+                            "body": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "噴藥馬達",
+                                        "size": "30px",
+                                        "gravity": "top",
+                                        "wrap": False,
+                                        "weight": "bold",
+                                        "style": "normal",
+                                        "position": "relative",
+                                        "align": "center"
+                                    }
+                                ]
+                            },
+                            "footer": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "text": "開噴藥馬達",
+                                            "label": "ON"
+                                        }
+                                    },
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "label": "OFF",
+                                            "text": "關噴藥馬達"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "bubble",
+                            "header": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": []
+                            },
+                            "hero": {
+                                "type": "image",
+                                "url": "https://cdn-icons.flaticon.com/png/512/1796/premium/1796886.png?token=exp=1652166423~hmac=a91f419c33ab8870937c687052adce4f"
+                            },
+                            "body": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "養液馬達",
+                                        "size": "30px",
+                                        "gravity": "top",
+                                        "wrap": False,
+                                        "weight": "bold",
+                                        "style": "normal",
+                                        "position": "relative",
+                                        "align": "center"
+                                    }
+                                ]
+                            },
+                            "footer": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "text": "開養液馬達",
+                                            "label": "ON"
+                                        }
+                                    },
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "label": "OFF",
+                                            "text": "關養液馬達"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "bubble",
+                            "header": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": []
+                            },
+                            "hero": {
+                                "type": "image",
+                                "url": "https://cdn-icons-png.flaticon.com/512/606/606795.png"
+                            },
+                            "body": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "遮陰控制",
+                                        "size": "30px",
+                                        "gravity": "top",
+                                        "wrap": False,
+                                        "weight": "bold",
+                                        "style": "normal",
+                                        "position": "relative",
+                                        "align": "center"
+                                    }
+                                ]
+                            },
+                            "footer": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "text": "開遮陰",
+                                            "label": "OPEN"
+                                        }
+                                    },
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "label": "STOP",
+                                            "text": "停遮陰"
+                                        }
+                                    },
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "label": "CLOSE",
+                                            "text": "關遮陰"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "bubble",
+                            "header": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": []
+                            },
+                            "hero": {
+                                "type": "image",
+                                "url": "https://cdn-icons.flaticon.com/png/512/3724/premium/3724545.png?token=exp=1652340600~hmac=4b4f33b891eb6bd98ca5760b82acd6fa"
+                            },
+                            "body": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "捲揚控制",
+                                        "size": "30px",
+                                        "gravity": "top",
+                                        "wrap": False,
+                                        "weight": "bold",
+                                        "style": "normal",
+                                        "position": "relative",
+                                        "align": "center"
+                                    }
+                                ]
+                            },
+                            "footer": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "text": "開捲揚",
+                                            "label": "OPEN"
+                                        }
+                                    },
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "label": "STOP",
+                                            "text": "停捲揚"
+                                        }
+                                    },
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "label": "CLOSE",
+                                            "text": "關捲揚"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "bubble",
+                            "header": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": []
+                            },
+                            "hero": {
+                                "type": "image",
+                                "url": "https://cdn-icons-png.flaticon.com/512/1353/1353091.png"
+                            },
+                            "body": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "天窗控制",
+                                        "size": "30px",
+                                        "gravity": "top",
+                                        "wrap": False,
+                                        "weight": "bold",
+                                        "style": "normal",
+                                        "position": "relative",
+                                        "align": "center"
+                                    }
+                                ]
+                            },
+                            "footer": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "text": "開天窗",
+                                            "label": "OPEN"
+                                        }
+                                    },
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "label": "STOP",
+                                            "text": "停天窗"
+                                        }
+                                    },
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "message",
+                                            "label": "CLOSE",
+                                            "text": "關天窗"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            message=FlexSendMessage(alt_text='控制選單',contents=content)
+            #A='255'
+            #FlexMessage = json.load(open('layout/ALL_MENU/FlexMessage_control_'+A+'.json','r',encoding='utf-8'))
+            #line_bot_api.reply_message( event.reply_token, FlexSendMessage("控制選單",FlexMessage))
+            line_bot_api.reply_message( event.reply_token, message)
 
 
             
@@ -161,6 +601,7 @@ def handle_postback(event):
                 event.reply_token,
                 TextSendMessage(text=Device+ts+"號 "+status)
                 )
+
 
 
 
