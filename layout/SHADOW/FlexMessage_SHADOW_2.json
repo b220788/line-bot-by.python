@@ -1,0 +1,59 @@
+{
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSMHjIMgyPW557h2NdAPjoT-esk3xW3_3PSA&usqp=CAU",
+    "size": "full",
+    "aspectRatio": "20:13",
+    "aspectMode": "cover",
+    "action": {
+      "type": ""
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "遮陰控制",
+        "weight": "bold",
+        "size": "xl"
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              
+              "type": "postback",
+              "label": "1號",
+			  "data":"1"
+
+            }
+
+          },
+          {
+            "type": "button",
+            "action": {
+               "type": "postback",
+              "label": "2號",
+			  "data":"2"
+            }
+          }
+        ],
+        "margin": "sm"
+      }
+    ],
+    "flex": 0
+  }
+}

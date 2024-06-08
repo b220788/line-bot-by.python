@@ -1,0 +1,97 @@
+{
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRMQM8PBb2XGqFh_vziBhAniNtgFWgybvB8Q&usqp=CAU",
+    "size": "full",
+    "aspectRatio": "20:13",
+    "aspectMode": "cover",
+    "action": {
+      "type": ""
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "植物燈",
+        "weight": "bold",
+        "size": "xl"
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              
+              "type": "postback",
+              "label": "1號",
+			  "data":"1"
+
+            }
+
+          },
+          {
+            "type": "button",
+            "action": {
+               "type": "postback",
+              "label": "2號",
+			  "data":"2"
+            }
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "3號",
+			  "data":"3"
+            }
+          }
+        ],
+        "margin": "sm"
+      },
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "4號",
+			  "data":"4"
+            }
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "5號",
+			  "data":"5"
+            }
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "6號",
+			  "data":"6"
+            }
+          }
+        ]
+      }
+    ],
+    "flex": 0
+  }
+}

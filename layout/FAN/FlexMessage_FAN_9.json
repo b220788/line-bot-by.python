@@ -1,0 +1,127 @@
+{
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://d.share.photo.xuite.net/rrabbit0918tw/1d47411/10156636/460938421_m.jpg",
+    "size": "full",
+    "aspectRatio": "20:13",
+    "aspectMode": "cover",
+    "action": {
+      "type": ""
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "循環風扇",
+        "weight": "bold",
+        "size": "xl"
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              
+              "type": "postback",
+              "label": "1號",
+			  "data":"1"
+
+            }
+
+          },
+          {
+            "type": "button",
+            "action": {
+               "type": "postback",
+              "label": "2號",
+			  "data":"2"
+            }
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "3號",
+			  "data":"3"
+            }
+          }
+        ],
+        "margin": "sm"
+      },
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "4號",
+			  "data":"4"
+            }
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "5號",
+			  "data":"5"
+            }
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "6號",
+			  "data":"6"
+            }
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "7號",
+			  "data":"7"
+            }
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "8號",
+			  "data":"8"
+            }
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "9號",
+			  "data":"9"
+            }
+          }
+        ]
+      }
+    ],
+    "flex": 0
+  }
+}

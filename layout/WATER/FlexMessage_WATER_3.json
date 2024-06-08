@@ -1,0 +1,67 @@
+{
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://www.newsmarket.com.tw/files/2015/11/%E5%9C%962.%E5%95%9F%E5%8B%95%E5%BE%AE%E9%9C%A7%E9%99%8D%E6%BA%AB%E7%B3%BB%E7%B5%B1%E9%80%B2%E8%A1%8C%E5%99%B4%E9%9C%A7%E3%80%82.jpg",
+    "size": "full",
+    "aspectRatio": "20:13",
+    "aspectMode": "cover",
+    "action": {
+      "type": ""
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "噴霧馬達",
+        "weight": "bold",
+        "size": "xl"
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              
+              "type": "postback",
+              "label": "1號",
+			  "data":"1"
+
+            }
+
+          },
+          {
+            "type": "button",
+            "action": {
+               "type": "postback",
+              "label": "2號",
+			  "data":"2"
+            }
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "3號",
+			  "data":"3"
+            }
+          }
+        ],
+        "margin": "sm"
+      }
+    ],
+    "flex": 0
+  }
+}

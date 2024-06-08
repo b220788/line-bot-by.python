@@ -1,0 +1,48 @@
+{
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Ftndais&psig=AOvVaw33kqZpzXGaIJ-vbmxQnqnj&ust=1654053853835000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJDH_PTkiPgCFQAAAAAdAAAAABAD",
+    "size": "full",
+    "aspectRatio": "20:13",
+    "aspectMode": "cover",
+    "action": {
+      "type": ""
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "功能選單",
+        "weight": "bold",
+        "size": "xl"
+      }
+    ]
+  },
+   "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "開啟介面",
+              "uri": "http://yuanmqtt.ddns.net:1886/ui"
+            }
+          }
+        ],
+        "margin": "sm"
+      }
+    ],
+    "flex": 0
+  }
+}

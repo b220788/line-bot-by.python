@@ -1,0 +1,49 @@
+{
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://i.imgur.com/qULjBtM.jpg",
+    "size": "full",
+    "aspectRatio": "20:13",
+    "aspectMode": "cover",
+    "action": {
+      "type": ""
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "功能選單",
+        "weight": "bold",
+        "size": "xl"
+      }
+    ]
+  },
+   "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "開啟介面",
+              "uri": "http://yuanmqtt.ddns.net:3650/ui/#!/1"
+            }
+          }
+        ],
+        "margin": "sm"
+      }
+    ],
+    "flex": 0
+  }
+}
+

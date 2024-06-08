@@ -1,0 +1,59 @@
+{
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://www.jjgreenhouse.com/wp-content/uploads/2019/09/%E9%9B%BB%E5%8B%95%E6%8D%B2%E8%86%9C%E5%99%A8-%E7%9B%B4%E7%AB%8B-%E7%9B%B4%E6%B5%81%E9%A6%AC%E9%81%94DC-24V%E5%AE%89%E8%A3%9D.jpg",
+    "size": "full",
+    "aspectRatio": "20:13",
+    "aspectMode": "cover",
+    "action": {
+      "type": ""
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "捲揚控制",
+        "weight": "bold",
+        "size": "xl"
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              
+              "type": "postback",
+              "label": "1號",
+			  "data":"1"
+
+            }
+
+          },
+          {
+            "type": "button",
+            "action": {
+               "type": "postback",
+              "label": "2號",
+			  "data":"2"
+            }
+          }
+        ],
+        "margin": "sm"
+      }
+    ],
+    "flex": 0
+  }
+}
