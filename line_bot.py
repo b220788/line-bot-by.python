@@ -47,29 +47,42 @@ def pretty_echo(event):
     global control_Status
     global status
     global Device
+    
+    response=requests.get('http://yuanmqtt.ddns.net:1886/sql')
+        if response.status_code ==200 :
+            ID_LIST=json.loads(response.text)
+            num=len(ID_LIST)
+            for i in range(num):
+                if ID_LIST[i]["LINE_ID"] == event.source.user_id:
+                    control_ID=ID_LIST[i]["SITE_ID"]
+                    print(control_ID)
+                    break
 
     for i in event.message.text:
         message_get += i
     #print(message_get)
-
-    
-
-        
-        
-        
-    if message_get =="控制選單":
-        FlexMessage = json.load(open('FlexMessage_control.json','r',encoding='utf-8'))
-        line_bot_api.reply_message( event.reply_token, FlexSendMessage("控制選單",FlexMessage))
-        if event.source.user_id == "U8886a35f392fc9a1fecad167c6ffd484" or event.source.user_id == "U553115716cb408b9c01266537f1bff1d":
-            control_ID="yuan"
-            
-    elif message_get =="聯絡客服":
+    if message_get == "報到" :
+        UserId = event.source.user_id
         line_bot_api.reply_message(
-        event.reply_token,
-            TextSendMessage(text="您好，加入客服中心，回報問題後會有專人為您服務 \n連結:https://lin.ee/hxeuVAO")
+            event.reply_token,
+            TextSendMessage(text="您的ID為"+UserId)
         )
+
+    if control_ID != "null" :
+
+
+        
+        if message_get =="控制選單":
+                FlexMessage = json.load(open('FlexMessage_control.json','r',encoding='utf-8'))
+                line_bot_api.reply_message( event.reply_token, FlexSendMessage("控制選單",FlexMessage))
             
-    else :
+            
+                
+        elif message_get =="聯絡客服":
+            line_bot_api.reply_message(
+            event.reply_token,
+                TextSendMessage(text="您好，加入客服中心，回報問題後會有專人為您服務 \n連結:https://lin.ee/hxeuVAO")
+            )
         if "開" in message_get:
             control_Status="ON"
             status="開"
@@ -79,7 +92,7 @@ def pretty_echo(event):
         elif "停" in message_get:
             control_Status="STOP"
             status="停"
-        
+
         if "循環風扇" in message_get :
             control_Device="FAN"
             Device="循環風扇"
@@ -120,7 +133,11 @@ def pretty_echo(event):
             Device="捲揚"
             FlexMessage = json.load(open('FlexMessage_WINCH.json','r',encoding='utf-8'))
             line_bot_api.reply_message( event.reply_token, FlexSendMessage("捲揚控制",FlexMessage))
-
+    else :
+        line_bot_api.reply_message(
+        event.reply_token,
+            TextSendMessage(text="您尚未擁有控制權，請在對話框輸入[報到]!")
+        )
 
 """else :
         if message_get == "報到" :
